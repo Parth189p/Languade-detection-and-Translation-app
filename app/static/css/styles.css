@@ -1,0 +1,89 @@
+/* Add some basic styles for the container and heading */
+/* styles.css */
+
+/* Additional styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #adefd1ff;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/000/962/809/original/abstract-gradient-background-with-colorful-and-modern-style-vector.jpg');
+  backdrop-filter: blur(15px);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 35px;
+  margin-top: 90px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+  text-align: center;
+  color: yellow;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  resize: vertical;
+  font-size: 24px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #ffffff, #e6e6e6, #cccccc, #b3b3b3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+#predict-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 2px solid blue;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#predict-button:hover {
+  background-color: rgb(119, 218, 136);
+}
+
+h2 {
+  margin-top: 40px;
+  color: #ffff14;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#prediction {
+  color: #ffc5c5;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+textarea {
+  background: linear-gradient(135deg, #ffffff, #e6e6e6, #cccccc, #b3b3b3);
+  border: 4px solid #dddddd;
+}
+
+#prediction {
+  color: #fffb02;
+}
+
+#translation {
+  color: #1d8a04;
+  font-weight: bold;
+  font-size: 25px;
+}

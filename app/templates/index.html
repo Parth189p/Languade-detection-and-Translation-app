@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Detection and Translation</title>
+    <link href="{{ url_for('static', path='css/style.css') }}" rel="stylesheet" type="text/css">
+    <style>
+    /* Additional styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #adefd1ff;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background: linear-gradient(135deg, #00ff87, #60efff);
+        backdrop-filter: blur(15px); /* Add blur effect to the background */
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: px;   
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect to the container */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(0, 0, 0);
+        margin-bottom: 40px;
+        font-size: 80px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .animated-title {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: .05em;
+    animation:
+        typing 4s steps(40, end),
+        blink-caret .75s step-end infinite,
+        neonGlowTitle 1.5s infinite alternate;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff, 0 0 150px #00ffff;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+}
+
+@keyframes neonGlowTitle {
+    0% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff, 0 0 150px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #00ffff, 0 0 80px #00ffff, 0 0 90px #00ffff, 0 0 110px #00ffff, 0 0 160px #00ffff;
+    }
+}
+
+
+
+
+
+
+
+
+    textarea {
+        width: 98%;
+        height: 400px; /* Increase the height of the text input container */
+        resize: vertical;
+        font-size: 24px;
+        border: none;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #c5f9d7, #f7d486, #f27a7d);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #000000;
+        margin-bottom: 2px;
+    }
+
+    #predict-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #000000;
+        background-color: transparent;
+        border: 2px solid bl;
+        border-radius: 4px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #predict-button:hover {
+        background-color: rgb(253, 152, 37);
+    }
+
+    h2 {
+        margin-top: 40px;
+        color: #000000;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #prediction {
+        color: #000000;
+        font-weight: bold;
+        font-size: 25px;
+        border: 2px solid #0000f6;
+        padding: 10px px;
+    }
+
+    #translated-text {
+        color: #000000;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: justify;
+        white-space: pre-wrap;
+        word-break: break-word;
+        display: inline-block;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .translation-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .translation-button {
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #000000;
+        background-color: transparent;
+        border: 2px solid bl;
+        border-radius: 4px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .translation-button:hover {
+        background-color: rgb(253, 152, 37);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-title">Language Detection and Translation</h1>
+        <div style="display: flex; flex-direction: row; width: 100%;">
+            <div style="width: 50%;">
+                <form id="prediction-form">
+                    <textarea id="text-input" name="text" placeholder="Enter text..."></textarea>
+                    <button id="predict-button" type="submit">Predict</button>
+                </form>
+            </div>
+            <div style="width: 50%;">
+                <h2>Language: <span id="prediction"></span></h2>
+                <h2>Translation: <span id="translated-text"></span></h2>
+                <div class="translation-buttons">
+                    <button class="translation-button" onclick="translateTo('english')">Translate to English</button>
+                    <button class="translation-button" onclick="translateTo('hindi')">Translate to Hindi</button>
+                    <button class="translation-button" onclick="translateTo('gujarati')">Translate to Gujarati</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', path='js/main.js') }}"></script>
+</body>
+</html>
