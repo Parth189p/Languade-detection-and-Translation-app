@@ -46,6 +46,7 @@ Several classification models were evaluated to identify the most suitable model
 
 ## Project Structure
 
+- `main.ipynb`: Contains the main code for making the language detection machinelearning model.
 - `main.py`: Contains the main FastAPI application code, including the API endpoints and their corresponding logic.
 - `static/`: Directory containing static files for the web application, such as CSS stylesheets and JavaScript files.
 - `templates/`: Directory containing HTML templates for the web application.
