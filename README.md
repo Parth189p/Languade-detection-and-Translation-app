@@ -1,4 +1,4 @@
-# Languade-detection-and-Translation-app
+# Languade-detection-and-Translation-Model
 
 This data science project focuses on developing a language detection model that can predict the language of a given text. The model is trained using a dataset collected from various websites, consisting of approximately 20,000 rows and covering around 20 different languages. After performing data cleaning and analysis, different classification models were evaluated, and the CountVectorizer combined with Multinomial Naive Bayes was selected as the best-performing model.
 
